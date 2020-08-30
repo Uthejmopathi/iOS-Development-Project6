@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-2G-kph">
+                                <rect key="frame" x="20" y="59" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Celsius"/>
+                                    <segment title="Fahrenheit"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="09P-i9-7zq"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J66-qH-iuw">
+                                <rect key="frame" x="84" y="145" width="240" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="gJb-HH-Hac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter The Temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Op6-dn-JsA">
+                                <rect key="frame" x="80" y="285" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="texfieldCharecteristics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="58G-7u-D2T"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Io-CD-bwp">
+                                <rect key="frame" x="140" y="367" width="134" height="34"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p6w-eb-Taw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aeb-pR-9wR">
+                                <rect key="frame" x="80" y="285" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="segmentedPagetwo:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ZHo-sk-L87"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Op6-dn-JsA" secondAttribute="trailing" constant="80" id="4b5-U7-ToT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tfO-2G-kph" secondAttribute="trailing" constant="20" id="5Qt-wg-o0C"/>
+                            <constraint firstItem="Aeb-pR-9wR" firstAttribute="centerX" secondItem="Op6-dn-JsA" secondAttribute="centerX" id="6Tc-I8-ezg"/>
+                            <constraint firstItem="3Io-CD-bwp" firstAttribute="centerX" secondItem="Op6-dn-JsA" secondAttribute="centerX" id="6xf-Lz-Zfu"/>
+                            <constraint firstItem="Op6-dn-JsA" firstAttribute="top" secondItem="J66-qH-iuw" secondAttribute="bottom" constant="20" id="B5l-JO-7tl"/>
+                            <constraint firstItem="Aeb-pR-9wR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Iv8-fi-1DT"/>
+                            <constraint firstItem="3Io-CD-bwp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="KBN-gQ-ZpL"/>
+                            <constraint firstItem="tfO-2G-kph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="M0m-6m-fhf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aeb-pR-9wR" secondAttribute="trailing" constant="80" id="O94-16-xFu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J66-qH-iuw" secondAttribute="trailing" constant="90" id="PDw-fh-4o9"/>
+                            <constraint firstItem="J66-qH-iuw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="UTA-qX-JPe"/>
+                            <constraint firstItem="3Io-CD-bwp" firstAttribute="top" secondItem="Op6-dn-JsA" secondAttribute="bottom" constant="48" id="UdP-Jv-yuc"/>
+                            <constraint firstItem="J66-qH-iuw" firstAttribute="top" secondItem="tfO-2G-kph" secondAttribute="bottom" constant="55" id="XOI-7x-ERH"/>
+                            <constraint firstItem="tfO-2G-kph" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dDU-IJ-1ls"/>
+                            <constraint firstItem="3Io-CD-bwp" firstAttribute="trailing" secondItem="Op6-dn-JsA" secondAttribute="trailing" id="hkl-sc-cmn"/>
+                            <constraint firstItem="Op6-dn-JsA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="kwp-CG-VtW"/>
+                            <constraint firstItem="Aeb-pR-9wR" firstAttribute="leading" secondItem="Op6-dn-JsA" secondAttribute="leading" id="l1S-hG-qDw"/>
+                            <constraint firstItem="Aeb-pR-9wR" firstAttribute="trailing" secondItem="Op6-dn-JsA" secondAttribute="trailing" id="moE-kq-fXx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Io-CD-bwp" secondAttribute="trailing" constant="140" id="rDL-vP-jGz"/>
+                            <constraint firstItem="3Io-CD-bwp" firstAttribute="leading" secondItem="Op6-dn-JsA" secondAttribute="leading" id="syT-kR-u6z"/>
+                            <constraint firstItem="Aeb-pR-9wR" firstAttribute="centerY" secondItem="Op6-dn-JsA" secondAttribute="centerY" id="uNE-Ae-ZFn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="jiY-uh-tiw"/>
+                        <outlet property="segmentedPage" destination="tfO-2G-kph" id="RZg-eE-krJ"/>
+                        <outlet property="submitButton" destination="3Io-CD-bwp" id="Gdc-LN-fa2"/>
+                        <outlet property="temperatureEntryTextField" destination="Op6-dn-JsA" id="DDH-fD-gVd"/>
+                        <outlet property="temperatureLabel" destination="J66-qH-iuw" id="PgH-oP-pEe"/>
+                        <outlet property="temperatureLabelFarenheit" destination="Aeb-pR-9wR" id="McT-5m-Tik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+</document>
